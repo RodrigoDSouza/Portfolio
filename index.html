@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Portfólio — Rodrigo Duarte</title>
+  <meta name="description" content="Portfólio profissional de Rodrigo Duarte — Desenvolvedor">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="assets/avatar.png">
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <div class="profile profile-center">
+        <img src="assets/avatar.png" alt="Avatar de Rodrigo Duarte">
+        <div>
+          <h1 id="name">Rodrigo Duarte</h1>
+          <p id="title">Desenvolvedor</p>
+          <div class="muted" id="headline"></div>
+          <div class="links" id="links" style="margin-top:10px"></div>
+        </div>
+      </div>
+    </header>
+
+    <main class="grid">
+      <section class="card" style="grid-column:span 12">
+        <h2>Sobre</h2>
+        <div id="about"></div>
+      </section>
+
+      <section class="card" style="grid-column:span 7">
+        <h2>Experiência</h2>
+        <ul class="timeline" id="experience"></ul>
+      </section>
+
+      <section class="card" style="grid-column:span 5">
+        <h2>Competências</h2>
+        <div class="chips" id="skills"></div>
+      </section>
+
+      <section class="card" style="grid-column:span 12">
+        <h2>Projetos</h2>
+        <div class="project-grid" id="projects"></div>
+      </section>
+
+      <section class="card" style="grid-column:span 12">
+        <div style="display:flex;justify-content:space-between;align-items:center">
+          <h2 style="margin:0">Certificados</h2>
+          <span class="badge">Atualizado</span>
+        </div>
+        <div class="cert-list" id="cert-list"></div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div>&copy; <span id="year"></span> Rodrigo Duarte — Portfólio</div>
+      <div class="small">Para trocar o avatar, substitua <code>assets/avatar.png</code>. Para publicar, use GitHub Pages, Netlify ou Vercel.</div>
+    </footer>
+  </div>
+  <script src="script.js"></script>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>

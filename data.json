@@ -1,0 +1,155 @@
+{
+  "name": "Rodrigo Duarte",
+  "title": "Desenvolvedor",
+  "headline": "Desenvolvedor | PHP/Laravel • SQL/PostgreSQL • Power BI/DAX • Docker • GitLab CI/CD • REST APIs • JavaScript",
+  "links": {
+    "linkedin": "https://www.linkedin.com/in/rodrigo-duarte-08a3001a2/",
+    "github": ""
+  },
+  "about": [
+    "Desenvolvedor com foco em backend PHP/Laravel, integrações REST e bancos de dados (PostgreSQL/SQL).",
+    "Experiência com modelagem de dados e criação de dashboards em Power BI (DAX).",
+    "Rotina com Git/GitLab CI/CD, Docker e boas práticas de DevOps."
+  ],
+  "experience": [
+    {
+      "role": "Desenvolvedor",
+      "company": "Qintess",
+      "period": "jun/2025 – atual",
+      "location": "Brasil",
+      "highlights": [
+        "APIs REST e serviços PHP/Laravel integrados a PostgreSQL/SQL.",
+        "Modelagem de dados e DAX em painéis Power BI.",
+        "CI/CD com GitLab, versionamento Git e conteinerização com Docker."
+      ]
+    }
+  ],
+  "skills": [
+    "PHP",
+    "Laravel",
+    "PostgreSQL",
+    "SQL",
+    "Power BI",
+    "DAX",
+    "REST APIs",
+    "Git",
+    "GitLab CI/CD",
+    "Docker",
+    "Linux",
+    "JavaScript",
+    "HTML/CSS",
+    "Python (pandas)",
+    "Data Modeling"
+  ],
+  "projects": [
+    {
+      "name": "Catálogo BI — ICMBio (app_docs)",
+      "description": "Site estático (HTML/CSS/JS/JSON) para catalogar painéis e consultas SQL com filtros e destaque de código.",
+      "tags": [
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "JSON"
+      ],
+      "link": ""
+    },
+    {
+      "name": "Consulta Unificada SQL — Voluntariado",
+      "description": "Query consolidando entidades (pessoa, unidades, biomas) com regras de herança; suporte a métricas e painéis.",
+      "tags": [
+        "SQL",
+        "PostgreSQL",
+        "Modelagem de Dados"
+      ],
+      "link": ""
+    },
+    {
+      "name": "Power BI — Programa de Voluntariado",
+      "description": "Modelagem, DAX e storytelling de indicadores (vagas, adesões, frequência, certificação).",
+      "tags": [
+        "Power BI",
+        "DAX",
+        "Data Modeling"
+      ],
+      "link": ""
+    },
+    {
+      "name": "CI/CD GitLab + Docker (Laravel)",
+      "description": "Pipeline para build/test/deploy de app Laravel com containers, variáveis de ambiente e revisão de branches.",
+      "tags": [
+        "GitLab CI/CD",
+        "Docker",
+        "Laravel",
+        "DevOps"
+      ],
+      "link": ""
+    },
+    {
+      "name": "Integrações SEI/SIP ↔ Singular (Docs)",
+      "description": "Levantamento e registro de parâmetros/tokens e fluxo de integração; guia de configuração e validação.",
+      "tags": [
+        "Integrações",
+        "APIs",
+        "Documentação Técnica"
+      ],
+      "link": ""
+    }
+  ],
+  "certificates": [
+    {
+      "name": "Análise Estruturada de Sistemas",
+      "issuer": "Fundação Bradesco",
+      "date": "11/11/2014"
+    },
+    {
+      "name": "Engenharia de Requisitos",
+      "issuer": "Fundação Bradesco",
+      "date": "17/11/2014"
+    },
+    {
+      "name": "Processo de Desenvolvimento de Software",
+      "issuer": "Fundação Bradesco",
+      "date": "11/11/2014"
+    },
+    {
+      "name": "Programação C#",
+      "issuer": "Fundação Bradesco",
+      "date": "08/05/2017"
+    },
+    {
+      "name": "Aplicações Java Mobile (J2ME)",
+      "issuer": "Fundação Bradesco",
+      "date": "16/05/2017"
+    },
+    {
+      "name": "Começando em Programação: carreira e primeiros passos",
+      "issuer": "Alura",
+      "date": "12/06/2025"
+    },
+    {
+      "name": "Lógica de Programação: explore funções e listas",
+      "issuer": "Alura",
+      "date": "26/08/2025"
+    },
+    {
+      "name": "Lógica de Programação: mergulhe em programação com JavaScript",
+      "issuer": "Alura",
+      "date": "24/06/2025"
+    },
+    {
+      "name": "Gestão da Informação e Documentação — Conceitos Básicos em Gestão Documental (Turma Abr/2020)",
+      "issuer": "ENAP",
+      "date": "23/04/2020"
+    },
+    {
+      "name": "Fundamentos da LGPD (Turma Abr/2022)",
+      "issuer": "ENAP",
+      "date": "13/04/2022"
+    },
+    {
+      "name": "Portal Gov.br (Turma Jul/2022)",
+      "issuer": "ENAP",
+      "date": "26/07/2022"
+    }
+  ]
+}
