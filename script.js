@@ -27,7 +27,41 @@ async function loadPortfolio() {
   });
 
   const chipWrap = document.querySelector('#skills'); chipWrap.innerHTML='';
-  (data.skills||[]).forEach(s => { const span=document.createElement('span'); span.className='chip'; span.textContent=s; chipWrap.appendChild(span); });
+  const skillIcons = {
+  "Power BI": "powerbi",
+  "DAX": "dax",
+  "SQL": "sql",
+  "PostgreSQL": "postgresql",
+  "Modelagem de Dados": "modelagem",
+  "Python": "python",
+  "pandas": "pandas",
+  "APIs REST": "api",
+  "Django": "django",
+  "FastAPI": "fastapi",
+  "Git": "git",
+  "Docker": "docker",
+  "Power Apps": "powerapps",
+  "Power Automate": "powerautomate",
+  "Postman": "postman"
+};
+  (data.skills||[]).forEach(skill => {
+    const item = document.createElement('span');
+    item.className = 'skill-tile';
+    if (skillIcons[skill]) {
+      const icon = document.createElement('img');
+      icon.src = 'assets/icons/' + skillIcons[skill] + '.svg';
+      icon.alt = '';
+      icon.width = 26;
+      icon.height = 26;
+      icon.loading = 'lazy';
+      icon.addEventListener('error', () => { icon.hidden = true; });
+      item.appendChild(icon);
+    }
+    const name = document.createElement('span');
+    name.textContent = skill;
+    item.appendChild(name);
+    chipWrap.appendChild(item);
+  });
 
   const pjWrap = document.querySelector('#projects'); pjWrap.innerHTML='';
   (data.projects||[]).forEach(pj => {
