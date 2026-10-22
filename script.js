@@ -1,12 +1,12 @@
 
 async function loadPortfolio() {
+  document.getElementById('year').textContent = new Date().getFullYear();
   const res = await fetch('data.json');
   if (!res.ok) throw new Error('Falha ao carregar conteúdo');
   const data = await res.json();
 
   document.querySelector('#name').textContent = data.name;
   document.querySelector('#title').textContent = data.title;
-  document.querySelector('#headline').textContent = data.headline;
 
   const linksWrap = document.querySelector('#links');
   linksWrap.innerHTML = '';
@@ -31,12 +31,15 @@ async function loadPortfolio() {
 
   const pjWrap = document.querySelector('#projects'); pjWrap.innerHTML='';
   (data.projects||[]).forEach(pj => {
-    const card = document.createElement('div'); card.className='card';
+    const card = document.createElement('article'); card.className='project-card';
+    const isFootball = pj.link.includes('/futebol-analytics');
+    const isSales = pj.link.includes('/demos/vendas');
+    const kind = isFootball ? 'football' : isSales ? 'sales' : 'api';
+    const cover = isFootball ? '<div class="field"></div>' : isSales ? '<div class="mini-bars"><i></i><i></i><i></i></div>' : '<div class="code-window"><strong>GET</strong> /pedidos<br>{ "status": "ok" }<br><strong>Python</strong> / FastAPI</div>';
     const tags = (pj.tags||[]).map(t => `<span class="chip">${t}</span>`).join(' ');
-    const link = pj.link ? `<a href="${pj.link}" class="btn" style="margin-top:10px" target="_blank" rel="noopener">Ver projeto</a>` : '';
-    card.innerHTML = `<h3 style="margin:0 0 6px">${pj.name}</h3>
-      <p class="muted" style="margin:0 0 8px">${pj.description}</p>
-      <div class="chips">${tags}</div>${link}`;
+    card.innerHTML = `<div class="project-cover cover-${kind}" aria-hidden="true"><span class="cover-label">${isFootball ? 'DADOS & ESTATÍSTICA' : isSales ? 'INDICADORES & VISUALIZAÇÃO' : 'BACKEND & INTEGRAÇÕES'}</span>${cover}<span class="cover-caption">ILUSTRAÇÃO DO PROJETO</span></div>
+      <div class="project-body"><span class="project-index">${isSales ? 'DEMONSTRAÇÃO · DADOS FICTÍCIOS' : 'PROJETO PESSOAL · CÓDIGO ABERTO'}</span><h3>${pj.name}</h3><p>${pj.description}</p><div class="chips">${tags}</div>
+      ${pj.link ? `<a href="${pj.link}" class="text-link" target="_blank" rel="noopener">Explorar projeto <span aria-hidden="true">↗</span></a>` : ''}</div>`;
     pjWrap.appendChild(card);
   });
 
