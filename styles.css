@@ -16,3 +16,8 @@
 
 /* Barras mantêm a proporção exata de 300 / 600 / 600. */
 .bars>div{height:calc(100% - 18px)}.bars i{height:var(--height)}.bars b{position:absolute;bottom:var(--height);line-height:18px}
+
+/* Avatar original do GitHub: recorte e iluminação apenas na apresentação. */
+.avatar-frame{display:block;width:76px;height:76px;flex:0 0 76px;border-radius:50%;overflow:hidden;border:3px solid #f8f9f5;outline:1px solid #bdcdb6;box-shadow:0 5px 18px #17343916;background:#1c2027}
+.person .avatar-frame img{display:block;width:100%;height:100%;border-radius:0;object-fit:cover;transform:translateY(10%) scale(1.35);transform-origin:center;filter:brightness(1.3) saturate(.9) contrast(1.02)}
+@media(max-width:370px){.avatar-frame{width:60px;height:60px;flex-basis:60px}.person{gap:8px}.person-divider{margin:0 3px}}
