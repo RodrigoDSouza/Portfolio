@@ -1,6 +1,7 @@
 
 async function loadPortfolio() {
   const res = await fetch('data.json');
+  if (!res.ok) throw new Error('Falha ao carregar conteúdo');
   const data = await res.json();
 
   document.querySelector('#name').textContent = data.name;
@@ -47,4 +48,8 @@ async function loadPortfolio() {
     certList.appendChild(item);
   });
 }
-document.addEventListener('DOMContentLoaded', loadPortfolio);
+document.addEventListener('DOMContentLoaded', () => {
+  loadPortfolio().catch(() => {
+    document.getElementById('load-error').hidden = false;
+  });
+});

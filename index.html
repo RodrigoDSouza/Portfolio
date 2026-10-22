@@ -10,6 +10,8 @@
 </head>
 <body>
   <div class="container">
+    <a class="skip-link" href="#conteudo">Ir para o conteúdo</a>
+    <nav class="navigation" aria-label="Navegação principal"><a href="#servicos">Serviços</a><a href="#projetos">Projetos</a><a href="#experiencia">Experiência</a></nav>
     <header class="header">
       <div class="profile profile-center">
         <img src="assets/avatar.png" alt="Avatar de Rodrigo Duarte">
@@ -22,14 +24,30 @@
       </div>
     </header>
 
-    <main class="grid">
+    <main class="grid" id="conteudo">
+      <section class="intro card">
+        <p class="eyebrow">DADOS QUE AJUDAM NA ROTINA</p>
+        <h2>Mais clareza nos números.<br>Menos trabalho manual.</h2>
+        <p class="muted">Organização de planilhas, painéis no Power BI e automações de relatórios para acompanhar seu negócio.</p>
+        <a class="btn primary" data-contact href="https://www.linkedin.com/in/rodrigo-duarte-08a3001a2/" target="_blank" rel="noopener">Conversar sobre meu projeto ↗</a>
+        <p class="small">Atuação atual: Analista de Dados na Stefanini, prestando serviços ao ICMBio.</p>
+      </section>
+      <section class="card" id="servicos" style="grid-column:span 12">
+        <p class="eyebrow">COMO POSSO AJUDAR</p><h2>Soluções com uma entrega clara</h2>
+        <div class="service-grid">
+          <article><span class="service-number">01</span><h3>Organização de dados</h3><p class="muted">Estruturar planilhas e padronizar informações para facilitar consultas e relatórios.</p></article>
+          <article><span class="service-number">02</span><h3>Painéis no Power BI</h3><p class="muted">Reunir os indicadores essenciais em uma visão simples, com filtros e comparações.</p></article>
+          <article><span class="service-number">03</span><h3>Automação de relatórios</h3><p class="muted">Reduzir etapas repetitivas de consolidação e geração de arquivos com Python.</p></article>
+        </div>
+        <p class="small">O escopo, o prazo e a forma de entrega são definidos após avaliar a necessidade e uma amostra dos dados.</p>
+      </section>
       <section class="card" style="grid-column:span 12">
         <h2>Sobre</h2>
         <div id="about"></div>
       </section>
 
       <section class="card" style="grid-column:span 7">
-        <h2>Experiência</h2>
+        <h2 id="experiencia">Experiência</h2>
         <ul class="timeline" id="experience"></ul>
       </section>
 
@@ -39,7 +57,7 @@
       </section>
 
       <section class="card" style="grid-column:span 12">
-        <h2>Projetos</h2>
+        <p class="eyebrow">CÓDIGO E DEMONSTRAÇÕES</p><h2 id="projetos">Projetos selecionados</h2>
         <div class="project-grid" id="projects"></div>
       </section>
 
@@ -48,10 +66,13 @@
           <h2 style="margin:0">Certificados</h2>
           <span class="badge">Formação complementar</span>
         </div>
-        <div class="cert-list" id="cert-list"></div>
+        <details><summary>Ver cursos e certificados</summary><div class="cert-list" id="cert-list"></div></details>
       </section>
     </main>
 
+    <section class="contact card"><p class="eyebrow">VAMOS CONVERSAR</p><h2>Qual relatório toma seu tempo hoje?</h2><p class="muted">Conte qual planilha você usa e o que gostaria de acompanhar. Podemos definir uma primeira entrega pequena.</p><a class="btn primary" data-contact href="https://www.linkedin.com/in/rodrigo-duarte-08a3001a2/" target="_blank" rel="noopener">Falar com Rodrigo no LinkedIn ↗</a></section>
+    <p id="load-error" role="status" hidden>Não foi possível carregar os detalhes do portfólio. Atualize a página ou use o contato acima.</p>
+    <noscript><p>Ative o JavaScript para visualizar os detalhes dos projetos. Os serviços e o contato estão disponíveis nesta página.</p></noscript>
     <footer class="footer">
       <div>&copy; <span id="year"></span> Rodrigo Duarte — Portfólio</div>
       <div class="small">Power BI, organização de dados e automação de relatórios. Entre em contato pelo LinkedIn.</div>

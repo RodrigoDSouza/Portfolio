@@ -1,5 +1,5 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap');
+
 :root{--bg:#0b1220;--bg2:#0e1528;--card:#111a2f;--text:#e6edf3;--muted:#a9b7c9;--accent:#2b8aeb;--chip:#17223a;--line:rgba(255,255,255,.08)}
 *{box-sizing:border-box}
 html,body{margin:0;padding:0;background:linear-gradient(180deg,var(--bg),var(--bg2));color:var(--text);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif}
@@ -53,3 +53,46 @@ ul.timeline{list-style:none;padding:0;margin:0;display:flex;flex-direction:colum
 .profile-center h1,.profile-center p,.profile-center .muted{margin:4px 0}
 
 .profile img{width:140px;height:140px;margin-bottom:10px}
+
+/* Apresentação de serviços e leitura em telas pequenas. */
+html{scroll-behavior:smooth;scroll-padding-top:24px}
+body{line-height:1.65}
+.navigation{display:flex;justify-content:flex-end;gap:24px;padding:8px 0 20px;font-size:14px}
+.navigation a{color:var(--muted)}
+.header{min-height:0;padding:40px 0}
+.profile img{width:100px;height:100px;object-fit:cover}
+.profile h1{font-size:36px;letter-spacing:-1px}
+.links{justify-content:center}
+.eyebrow{color:#81c5ff;font-size:11px;letter-spacing:2px;font-weight:800;margin:0 0 12px}
+.intro{padding:36px;background:linear-gradient(120deg,#14243f,#101b2d)}
+.intro h2{font-size:clamp(28px,4vw,44px);line-height:1.15;letter-spacing:-1px;margin-bottom:18px}
+.intro .muted{font-size:17px;max-width:650px}
+.primary{background:#95dbff;color:#071a2d;border-color:#95dbff}
+.btn{transition:transform .15s}
+.btn:hover{transform:translateY(-2px);text-decoration:none}
+.service-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;margin:24px 0}
+.service-grid article{border-top:1px solid var(--line);padding-top:20px}
+.service-grid h3{font-size:18px}
+.service-number{font-size:12px;font-weight:800;color:#81c5ff}
+.project-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+.project-grid .card{display:flex;flex-direction:column;min-width:0;box-shadow:none}
+.project-grid .btn{align-self:flex-start;margin-top:auto!important}
+.project-grid .chips{margin-bottom:20px}
+.timeline li li{padding:0;border:0;background:none}
+.contact{margin-top:24px;padding:30px}
+details{margin-top:20px}
+summary{cursor:pointer;color:#95dbff}
+.cert-list{margin-top:16px}
+a:focus-visible,summary:focus-visible{outline:3px solid #95dbff;outline-offset:5px}
+.skip-link{position:absolute;top:-100px;background:#95dbff;color:#071a2d;padding:10px;z-index:10}
+.skip-link:focus{top:8px}
+.card,.profile{min-width:0}
+@media(max-width:860px){
+.grid>.card{grid-column:span 12!important}
+.service-grid,.project-grid{grid-template-columns:1fr}
+.container{padding:18px}
+.intro,.contact{padding:24px}
+.profile h1{font-size:30px}
+.navigation{justify-content:center;gap:18px}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.btn{transition:none}.btn:hover{transform:none}}
