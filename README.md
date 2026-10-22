@@ -1,93 +1,51 @@
-# Portfólio — Rodrigo Duarte
+# Rodrigo Duarte — Dados e Automação
 
-[![Status](https://img.shields.io/badge/status-online-brightgreen)](#)  
-[![Made with](https://img.shields.io/badge/made%20with-HTML%20%7C%20CSS%20%7C%20JS%20%7C%20JSON-blue)](#)
-[![License](https://img.shields.io/badge/license-MIT-informational)](#)
+Portfólio profissional com foco em Power BI, SQL/PostgreSQL e automações com Python.
 
-Site estático com meu portfólio profissional: perfil, experiência, skills, projetos e certificados.
+[Acessar portfólio](https://rodrigodsouza.github.io/Portfolio/) · [LinkedIn](https://www.linkedin.com/in/rodrigo-duarte-08a3001a2/) · [GitHub](https://github.com/RodrigoDSouza)
 
-🔗 **Live (GitHub Pages):** https://rodrigoDSouza.github.io/Portfolio/  
-💼 **LinkedIn:** https://www.linkedin.com/in/rodrigo-duarte-souza/
+## Projetos em destaque
 
----
+| Projeto | O que demonstra |
+| --- | --- |
+| [Futebol Analytics](https://github.com/RodrigoDSouza/futebol-analytics) | Integração de fontes, armazenamento e análise estatística |
+| [API de Gestão de Pedidos](https://github.com/RodrigoDSouza/rest) | Backend Python e organização em camadas |
+| [Análise de vendas com dados fictícios](demos/vendas/README.md) | Indicadores e roteiro de construção de painel no Power BI |
 
-## 👀 Preview
-![Preview do site](assets/preview.png)
+Os projetos de estudo são identificados como demonstrações. Materiais privados do trabalho não são publicados aqui.
 
----
+## Executar localmente
 
-## 🧩 Tecnologias
-- **HTML5** + **CSS3**
-- **JavaScript** (fetch)
-- **JSON** para conteúdo dinâmico
+Na raiz do repositório:
 
----
-
-## 📂 Estrutura
-Portfolio/
-├─ index.html # página principal
-├─ styles.css # estilos
-├─ script.js # renderização dinâmica via data.json
-├─ data.json # conteúdo: perfil, projetos, certificados
-└─ assets/
-└─ avatar.png # avatar exibido no header
-
-
----
-
-## ▶️ Rodando localmente
-Use qualquer servidor estático. Exemplos:
-
-### VS Code (Live Server)
-1. Instale a extensão **Live Server**  
-2. Clique com o direito no `index.html` → **Open with Live Server**
-
-### Python (built-in)
 ```bash
-# Python 3
-python3 -m http.server 5500
-# abra http://localhost:5500
+python -m http.server 5500
+```
 
----
-🌍 Publicação (GitHub Pages)
+Abra http://localhost:5500. O servidor é necessário para carregar o `data.json`.
 
-No GitHub: Settings → Pages
+## Organização
 
-Source: Deploy from a branch
+| Arquivo | Responsabilidade |
+| --- | --- |
+| `index.html` | Estrutura da página |
+| `styles.css` | Estilos e layout |
+| `script.js` | Carregamento do conteúdo |
+| `data.json` | Perfil, experiência, competências e projetos |
+| `assets/` | Imagens |
+| `demos/vendas/` | Demonstração com dados fictícios |
 
-Branch: main • Folder: / (root)
+## Atualizar o conteúdo
 
-Salvar e aguardar a publicação.
+Edite `data.json` e use links públicos que possam ser acessados pelo visitante.
+Confira o perfil, os projetos e os contatos antes de publicar.
+Os certificados registrados no conteúdo representam formação complementar.
 
-URL: https://rodrigoDSouza.github.io/Portfolio/
+## GitHub Pages
 
----
-🛠️ Personalização rápida
-Headline / Sobre / Projetos / Certificados
+Em Settings → Pages, a publicação pode usar a branch `main` e a pasta raiz.
+A disponibilidade do endereço depende da configuração e do término da publicação.
 
-Edite o data.json. Exemplo para adicionar um projeto:
-{
-  "name": "Catálogo BI — ICMBio (app_docs)",
-  "description": "Site estático para catalogar dashboards e consultas SQL.",
-  "tags": ["HTML","CSS","JavaScript","JSON"],
-  "link": "https://github.com/SEUUSUARIO/repositorio"
-}
+## Contato
 
----
-Avatar
-
-Substitua assets/avatar.png por outra imagem com o mesmo nome.
-
-git add .
-git commit -m "docs: atualiza README com link do Pages e instruções"
-git push
-
----
-📬 Contato
-
-LinkedIn: https://www.linkedin.com/in/rodrigo-duarte-souza/
-
----
-📝 Licença
-
-Uso pessoal. Sinta-se à vontade para adaptar o modelo.
+[Conversar pelo LinkedIn](https://www.linkedin.com/in/rodrigo-duarte-08a3001a2/)

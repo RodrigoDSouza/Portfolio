@@ -1,98 +1,77 @@
 {
   "name": "Rodrigo Duarte",
-  "title": "Desenvolvedor",
-  "headline": "Desenvolvedor | PHP/Laravel • SQL/PostgreSQL • Power BI/DAX • Docker • GitLab CI/CD • REST APIs • JavaScript",
+  "title": "Analista de Dados",
+  "headline": "Power BI e DAX • SQL/PostgreSQL • Automações com Python • Integrações REST",
   "links": {
     "linkedin": "https://www.linkedin.com/in/rodrigo-duarte-08a3001a2/",
-    "github": ""
+    "github": "https://github.com/RodrigoDSouza"
   },
   "about": [
-    "Desenvolvedor com foco em backend PHP/Laravel, integrações REST e bancos de dados (PostgreSQL/SQL).",
-    "Experiência com modelagem de dados e criação de dashboards em Power BI (DAX).",
-    "Rotina com Git/GitLab CI/CD, Docker e boas práticas de DevOps."
+    "Transformo dados em relatórios e painéis para facilitar o acompanhamento de indicadores e reduzir tarefas manuais.",
+    "Experiência com Power BI, SQL/PostgreSQL, automações em Python e integrações de sistemas em demandas atendidas para o ICMBio, por meio de empresas prestadoras de serviço.",
+    "Desenvolvo também projetos de estudo com APIs e Django. Meu foco é organizar informações e construir soluções úteis para a rotina de trabalho."
   ],
   "experience": [
     {
-      "role": "Desenvolvedor",
-      "company": "Qintess",
-      "period": "jun/2025 – atual",
-      "location": "Brasil",
+      "role": "Analista de Dados Jr",
+      "company": "Stefanini — prestação de serviços ao ICMBio",
+      "period": "jan/2026 – atual",
+      "location": "Brasília/DF",
       "highlights": [
-        "APIs REST e serviços PHP/Laravel integrados a PostgreSQL/SQL.",
-        "Modelagem de dados e DAX em painéis Power BI.",
-        "CI/CD com GitLab, versionamento Git e conteinerização com Docker."
+        "Desenvolvimento e manutenção de dashboards em Power BI, com modelagem de dados e medidas DAX.",
+        "Consultas SQL e automação de relatórios com Python e PostgreSQL.",
+        "Atendimento de demandas de integração e suporte a sistemas institucionais."
       ]
     }
   ],
   "skills": [
-    "PHP",
-    "Laravel",
-    "PostgreSQL",
-    "SQL",
     "Power BI",
     "DAX",
-    "REST APIs",
+    "SQL",
+    "PostgreSQL",
+    "Modelagem de Dados",
+    "Python",
+    "pandas",
+    "APIs REST",
+    "Django",
+    "FastAPI",
     "Git",
-    "GitLab CI/CD",
     "Docker",
-    "Linux",
-    "JavaScript",
-    "HTML/CSS",
-    "Python (pandas)",
-    "Data Modeling"
+    "Power Apps",
+    "Power Automate"
   ],
   "projects": [
     {
-      "name": "Catálogo BI — ICMBio (app_docs)",
-      "description": "Site estático (HTML/CSS/JS/JSON) para catalogar painéis e consultas SQL com filtros e destaque de código.",
+      "name": "Futebol Analytics",
+      "description": "Projeto pessoal em desenvolvimento: coleta de dados de APIs e CSV, armazenamento em PostgreSQL, análises estatísticas e interface em Streamlit. Código e testes disponíveis no repositório.",
       "tags": [
-        "HTML",
-        "CSS",
-        "JavaScript",
-        "JSON"
-      ],
-      "link": ""
-    },
-    {
-      "name": "Consulta Unificada SQL — Voluntariado",
-      "description": "Query consolidando entidades (pessoa, unidades, biomas) com regras de herança; suporte a métricas e painéis.",
-      "tags": [
-        "SQL",
+        "Python",
         "PostgreSQL",
-        "Modelagem de Dados"
+        "APIs",
+        "Streamlit"
       ],
-      "link": ""
+      "link": "https://github.com/RodrigoDSouza/futebol-analytics"
     },
     {
-      "name": "Power BI — Programa de Voluntariado",
-      "description": "Modelagem, DAX e storytelling de indicadores (vagas, adesões, frequência, certificação).",
+      "name": "API de Gestão de Pedidos",
+      "description": "API de estudo para cadastro de clientes e pedidos, com FastAPI, SQLAlchemy, autenticação por chave e organização em camadas. Documentação de instalação disponível.",
+      "tags": [
+        "Python",
+        "FastAPI",
+        "SQLAlchemy",
+        "REST"
+      ],
+      "link": "https://github.com/RodrigoDSouza/rest"
+    },
+    {
+      "name": "Demonstração de análise de vendas",
+      "description": "Estudo com dados inteiramente fictícios, definições de indicadores e roteiro para montar um painel de vendas no Power BI. Material demonstrativo; não representa resultados de clientes.",
       "tags": [
         "Power BI",
-        "DAX",
-        "Data Modeling"
+        "CSV",
+        "Indicadores"
       ],
-      "link": ""
-    },
-    {
-      "name": "CI/CD GitLab + Docker (Laravel)",
-      "description": "Pipeline para build/test/deploy de app Laravel com containers, variáveis de ambiente e revisão de branches.",
-      "tags": [
-        "GitLab CI/CD",
-        "Docker",
-        "Laravel",
-        "DevOps"
-      ],
-      "link": ""
-    },
-    {
-      "name": "Integrações SEI/SIP ↔ Singular (Docs)",
-      "description": "Levantamento e registro de parâmetros/tokens e fluxo de integração; guia de configuração e validação.",
-      "tags": [
-        "Integrações",
-        "APIs",
-        "Documentação Técnica"
-      ],
-      "link": ""
+      "link": "https://github.com/RodrigoDSouza/Portfolio/tree/main/demos/vendas"
     }
   ],
   "certificates": [
