@@ -4,6 +4,10 @@ Portfólio profissional com foco em Power BI, SQL/PostgreSQL, automações com P
 
 [Portfólio](https://rodrigodsouza.github.io/Portfolio/) · [Demonstração de vendas](https://rodrigodsouza.github.io/Portfolio/demos/vendas/) · [LinkedIn](https://www.linkedin.com/in/rodrigo-duarte-08a3001a2/) · [GitHub](https://github.com/RodrigoDSouza)
 
+## Prévia
+
+![Página inicial do portfólio](assets/preview.jpg)
+
 ## Projetos em destaque
 
 | Projeto | O que demonstra |
