@@ -39,3 +39,11 @@ test('a soma monetária usa centavos para evitar erros de ponto flutuante',()=>{
   assert.equal(result.revenue,0.5);
   assert.equal(result.ticket,0.25);
 });
+
+test('cada mês do CSV possui uma opção de filtro no HTML',()=>{
+  const html = fs.readFileSync(new URL('../demos/vendas/index.html',import.meta.url),'utf8');
+  assert.doesNotMatch(html,/<\/option\s/);
+  for (const month of new Set(rows.map(row=>row.data.slice(0,7)))) {
+    assert.ok(html.includes('<option value="'+month+'">'), 'Mês ausente: '+month);
+  }
+});
