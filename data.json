@@ -20,6 +20,7 @@
       "highlights": [
         "Desenvolvimento e manutenção de dashboards em Power BI, com modelagem de dados e medidas DAX.",
         "Consultas SQL e automação de relatórios com Python e PostgreSQL.",
+        "Consumo e testes de APIs REST no Postman, com autenticação por token e validação de respostas.",
         "Atendimento de demandas de integração e suporte a sistemas institucionais."
       ]
     }
@@ -43,36 +44,46 @@
   ],
   "projects": [
     {
+      "name": "Análise de vendas",
+      "description": "Exemplo de acompanhamento de faturamento, pedidos e ticket médio. Explore os filtros por mês e categoria e confira os dados usados no cálculo.",
+      "tags": [
+        "Indicadores",
+        "CSV",
+        "HTML"
+      ],
+      "link": "demos/vendas/",
+      "kind": "sales",
+      "status": "Demonstração · dados fictícios",
+      "linkLabel": "Abrir demonstração",
+      "source": "https://github.com/RodrigoDSouza/Portfolio/tree/main/demos/vendas"
+    },
+    {
       "name": "Futebol Analytics",
-      "description": "Projeto pessoal em desenvolvimento: coleta de dados de APIs e CSV, armazenamento em PostgreSQL, análises estatísticas e interface em Streamlit. Código e testes disponíveis no repositório.",
+      "description": "Coleta de APIs e arquivos CSV, armazenamento em PostgreSQL e análise estatística de partidas. Demonstra o caminho da integração de fontes até a apresentação dos dados.",
       "tags": [
         "Python",
         "PostgreSQL",
         "APIs",
         "Streamlit"
       ],
-      "link": "https://github.com/RodrigoDSouza/futebol-analytics"
+      "link": "https://github.com/RodrigoDSouza/futebol-analytics",
+      "kind": "football",
+      "status": "Projeto pessoal · em desenvolvimento",
+      "linkLabel": "Ver código e documentação"
     },
     {
       "name": "API de Gestão de Pedidos",
-      "description": "API de estudo para cadastro de clientes e pedidos, com FastAPI, SQLAlchemy, autenticação por chave e organização em camadas. Documentação de instalação disponível.",
+      "description": "Cadastro de clientes e pedidos em uma API Python, com validação de dados, autenticação por chave e organização em camadas.",
       "tags": [
         "Python",
         "FastAPI",
         "SQLAlchemy",
         "REST"
       ],
-      "link": "https://github.com/RodrigoDSouza/rest"
-    },
-    {
-      "name": "Demonstração de análise de vendas",
-      "description": "Estudo com dados inteiramente fictícios, definições de indicadores e roteiro para montar um painel de vendas no Power BI. Material demonstrativo; não representa resultados de clientes.",
-      "tags": [
-        "Power BI",
-        "CSV",
-        "Indicadores"
-      ],
-      "link": "https://github.com/RodrigoDSouza/Portfolio/tree/main/demos/vendas"
+      "link": "https://github.com/RodrigoDSouza/rest",
+      "kind": "api",
+      "status": "Projeto de estudo",
+      "linkLabel": "Ver código e documentação"
     }
   ],
   "certificates": [
@@ -133,3 +144,4 @@
     }
   ]
 }
+

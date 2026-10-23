@@ -6,7 +6,9 @@ Dados inteiramente fictícios, criados para mostrar uma entrega pequena de anál
 
 Uma loja quer acompanhar vendas mensais, produtos e ticket médio a partir de uma planilha.
 O arquivo [vendas.csv](vendas.csv) contém seis pedidos, um produto por pedido, sem descontos, devoluções ou frete.
-Este material é uma base e um roteiro; ainda não inclui arquivo PBIX, captura de dashboard ou vídeo.
+[Abrir a demonstração interativa](https://rodrigodsouza.github.io/Portfolio/demos/vendas/).
+
+A página em HTML permite filtrar mês e categoria, conferir os indicadores e consultar os pedidos usados nos cálculos. Não inclui arquivo PBIX ou vídeo. O roteiro abaixo mostra como utilizar a mesma base no Power BI.
 
 ## Montar no Power BI Desktop
 
@@ -42,3 +44,9 @@ Faturamento significa valor bruto vendido nesta base, não lucro ou recebimento.
 
 Fundo claro, uma cor principal, títulos que expliquem a medida e valores monetários em reais.
 Priorize leitura e consistência. O faturamento por produto deve somar o faturamento total.
+
+
+## Conferência automatizada
+
+Os testes em `tests/sales.test.mjs`, na raiz do repositório, verificam os totais, os filtros combinados, as seleções vazias e a soma em centavos. Para alterar o CSV, confira também os valores estáticos da demonstração e regenere o HTML com `node scripts/build.mjs`.
+

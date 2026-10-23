@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Análise de vendas | Rodrigo Duarte</title>
+<meta name="description" content="Demonstração interativa de análise de vendas com dados fictícios, filtros e indicadores calculados a partir de um CSV.">
+<link rel="canonical" href="https://rodrigodsouza.github.io/Portfolio/demos/vendas/">
+<link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../../styles.css"><link rel="stylesheet" href="demo.css">
+</head>
+<body><a class="skip-link" href="#demo-content">Ir para a demonstração</a>
+<div class="container demo-container">
+<nav class="demo-nav" aria-label="Navegação"><a href="../../">← Voltar ao portfólio</a><a href="vendas.csv" download>Baixar dados CSV ↓</a></nav>
+<main id="demo-content">
+<header class="demo-intro"><p class="eyebrow">DEMONSTRAÇÃO · DADOS FICTÍCIOS</p><h1>Análise de vendas</h1><p>Veja como uma planilha pode virar uma visão simples do negócio. Filtre os dados, acompanhe os indicadores e confira cada registro abaixo.</p><p class="demo-note">Exemplo em HTML com seis pedidos fictícios. O faturamento representa vendas brutas, sem descontos, devoluções, frete ou custos; não representa lucro.</p></header>
+<form class="demo-filters" aria-label="Filtros de vendas" hidden>
+<div><label for="month">Mês</label><select id="month" name="month"><option value="">Todos os meses</option value="2026-01">Janeiro de 2026</option><option value="2026-02">Fevereiro de 2026</option><option value="2026-03">Março de 2026</option></select></div>
+<div><label for="category">Categoria</label><select id="category" name="category"><option value="">Todas as categorias</option><option value="Papelaria">Papelaria</option><option value="Acessorios">Acessórios</option></select></div>
+<button type="reset">Limpar filtros</button>
+</form>
+<p id="filter-status" class="demo-status" role="status" aria-live="polite">6 pedidos encontrados. Todos os meses · Todas as categorias.</p>
+<div class="demo-metrics" aria-label="Indicadores de vendas">
+<article><h2>Faturamento bruto</h2><strong id="revenue">R$ 1.500,00</strong><p>Soma de quantidade × preço</p></article>
+<article><h2>Pedidos</h2><strong id="orders">6</strong><p>Pedidos distintos</p></article>
+<article><h2>Ticket médio</h2><strong id="ticket">R$ 250,00</strong><p>Faturamento ÷ pedidos</p></article>
+<article><h2>Unidades vendidas</h2><strong id="units">80</strong><p>Soma das quantidades</p></article>
+</div>
+<section class="demo-panel" aria-labelledby="chart-title"><h2 id="chart-title">Faturamento por mês</h2><div id="monthly-chart"><svg viewBox="0 0 640 245" role="img" aria-labelledby="monthly-title monthly-description">
+<title id="monthly-title">Faturamento mensal dos pedidos fictícios</title><desc id="monthly-description">Janeiro: R$ 300,00. Fevereiro: R$ 600,00. Março: R$ 600,00.</desc>
+<g stroke="#dce3dd"><path d="M90 45H625M90 120H625M90 195H625"/></g>
+<g fill="#52645d" font-family="Arial, sans-serif" font-size="14"><text x="0" y="50">R$ 600,00</text><text x="0" y="125">R$ 300,00</text><text x="0" y="200">R$ 0,00</text></g>
+<rect x="140" y="120" width="70" height="75" rx="4" fill="#658650"/><text x="175" y="110" text-anchor="middle" fill="#173439" font-family="Arial, sans-serif" font-size="15">R$ 300,00</text><text x="175" y="225" text-anchor="middle" fill="#52645d" font-family="Arial, sans-serif" font-size="14">Janeiro</text><rect x="315" y="45" width="70" height="150" rx="4" fill="#aac98b"/><text x="350" y="35" text-anchor="middle" fill="#173439" font-family="Arial, sans-serif" font-size="15">R$ 600,00</text><text x="350" y="225" text-anchor="middle" fill="#52645d" font-family="Arial, sans-serif" font-size="14">Fevereiro</text><rect x="490" y="45" width="70" height="150" rx="4" fill="#254b41"/><text x="525" y="35" text-anchor="middle" fill="#173439" font-family="Arial, sans-serif" font-size="15">R$ 600,00</text><text x="525" y="225" text-anchor="middle" fill="#52645d" font-family="Arial, sans-serif" font-size="14">Março</text>
+</svg></div></section>
+<section class="demo-panel" aria-labelledby="table-title"><div class="demo-table-heading"><h2 id="table-title">Dados usados nos cálculos</h2><span>Valores em reais</span></div>
+<div class="table-scroll" role="region" aria-label="Tabela de vendas; role horizontalmente para ver todas as colunas" tabindex="0">
+<table><caption class="visually-hidden">Pedidos fictícios filtrados para cálculo dos indicadores.</caption><thead><tr><th scope="col">Pedido</th><th scope="col">Data</th><th scope="col">Produto</th><th scope="col">Categoria</th><th scope="col" class="numeric">Quantidade</th><th scope="col" class="numeric">Preço unitário</th><th scope="col" class="numeric">Total</th></tr></thead><tbody id="sales-rows"><tr><td>1</td><td>05/01/2026</td><td>Caderno</td><td>Papelaria</td><td class="numeric">10</td><td class="numeric">R$ 20,00</td><td class="numeric">R$ 200,00</td></tr>
+<tr><td>2</td><td>10/01/2026</td><td>Caneta</td><td>Papelaria</td><td class="numeric">20</td><td class="numeric">R$ 5,00</td><td class="numeric">R$ 100,00</td></tr>
+<tr><td>3</td><td>03/02/2026</td><td>Caderno</td><td>Papelaria</td><td class="numeric">15</td><td class="numeric">R$ 20,00</td><td class="numeric">R$ 300,00</td></tr>
+<tr><td>4</td><td>15/02/2026</td><td>Mochila</td><td>Acessórios</td><td class="numeric">2</td><td class="numeric">R$ 150,00</td><td class="numeric">R$ 300,00</td></tr>
+<tr><td>5</td><td>08/03/2026</td><td>Caneta</td><td>Papelaria</td><td class="numeric">30</td><td class="numeric">R$ 5,00</td><td class="numeric">R$ 150,00</td></tr>
+<tr><td>6</td><td>20/03/2026</td><td>Mochila</td><td>Acessórios</td><td class="numeric">3</td><td class="numeric">R$ 150,00</td><td class="numeric">R$ 450,00</td></tr></tbody></table></div><p id="empty-state" hidden>Nenhum pedido corresponde a esses filtros. Experimente outro mês ou categoria.</p></section>
+<noscript><p class="demo-note">Os dados completos e os indicadores estão disponíveis. Ative o JavaScript para usar os filtros.</p></noscript>
+<section class="demo-end"><div><h2>Quer acompanhar os números do seu negócio?</h2><p>Podemos começar pela planilha que você já utiliza.</p></div><a class="btn primary" href="https://www.linkedin.com/in/rodrigo-duarte-08a3001a2/" target="_blank" rel="noopener noreferrer">Conversar sobre meu projeto ↗</a></section>
+</main><footer class="footer"><a href="../../">Rodrigo Duarte · Portfólio</a><a href="https://github.com/RodrigoDSouza/Portfolio/tree/main/demos/vendas" target="_blank" rel="noopener noreferrer">Código e roteiro no GitHub ↗</a></footer>
+</div>
+<script type="application/json" id="sales-data">[{"pedido_id":1,"data":"2026-01-05","produto":"Caderno","categoria":"Papelaria","quantidade":10,"preco_unitario":20},{"pedido_id":2,"data":"2026-01-10","produto":"Caneta","categoria":"Papelaria","quantidade":20,"preco_unitario":5},{"pedido_id":3,"data":"2026-02-03","produto":"Caderno","categoria":"Papelaria","quantidade":15,"preco_unitario":20},{"pedido_id":4,"data":"2026-02-15","produto":"Mochila","categoria":"Acessorios","quantidade":2,"preco_unitario":150},{"pedido_id":5,"data":"2026-03-08","produto":"Caneta","categoria":"Papelaria","quantidade":30,"preco_unitario":5},{"pedido_id":6,"data":"2026-03-20","produto":"Mochila","categoria":"Acessorios","quantidade":3,"preco_unitario":150}]</script><script src="demo.js" type="module"></script>
+</body></html>
+

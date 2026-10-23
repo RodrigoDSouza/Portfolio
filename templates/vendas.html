@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Análise de vendas | Rodrigo Duarte</title>
+<meta name="description" content="Demonstração interativa de análise de vendas com dados fictícios, filtros e indicadores calculados a partir de um CSV.">
+<link rel="canonical" href="https://rodrigodsouza.github.io/Portfolio/demos/vendas/">
+<link rel="icon" href="../../assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../../styles.css"><link rel="stylesheet" href="demo.css">
+</head>
+<body><a class="skip-link" href="#demo-content">Ir para a demonstração</a>
+<div class="container demo-container">
+<nav class="demo-nav" aria-label="Navegação"><a href="../../">← Voltar ao portfólio</a><a href="vendas.csv" download>Baixar dados CSV ↓</a></nav>
+<main id="demo-content">
+<header class="demo-intro"><p class="eyebrow">DEMONSTRAÇÃO · DADOS FICTÍCIOS</p><h1>Análise de vendas</h1><p>Veja como uma planilha pode virar uma visão simples do negócio. Filtre os dados, acompanhe os indicadores e confira cada registro abaixo.</p><p class="demo-note">Exemplo em HTML com seis pedidos fictícios. O faturamento representa vendas brutas, sem descontos, devoluções, frete ou custos; não representa lucro.</p></header>
+<form class="demo-filters" aria-label="Filtros de vendas" hidden>
+<div><label for="month">Mês</label><select id="month" name="month"><option value="">Todos os meses</option value="2026-01">Janeiro de 2026</option><option value="2026-02">Fevereiro de 2026</option><option value="2026-03">Março de 2026</option></select></div>
+<div><label for="category">Categoria</label><select id="category" name="category"><option value="">Todas as categorias</option><option value="Papelaria">Papelaria</option><option value="Acessorios">Acessórios</option></select></div>
+<button type="reset">Limpar filtros</button>
+</form>
+<p id="filter-status" class="demo-status" role="status" aria-live="polite">6 pedidos encontrados. Todos os meses · Todas as categorias.</p>
+<div class="demo-metrics" aria-label="Indicadores de vendas">
+<article><h2>Faturamento bruto</h2><strong id="revenue">R$ 1.500,00</strong><p>Soma de quantidade × preço</p></article>
+<article><h2>Pedidos</h2><strong id="orders">6</strong><p>Pedidos distintos</p></article>
+<article><h2>Ticket médio</h2><strong id="ticket">R$ 250,00</strong><p>Faturamento ÷ pedidos</p></article>
+<article><h2>Unidades vendidas</h2><strong id="units">80</strong><p>Soma das quantidades</p></article>
+</div>
+<section class="demo-panel" aria-labelledby="chart-title"><h2 id="chart-title">Faturamento por mês</h2><div id="monthly-chart">{{DEMO_CHART}}</div></section>
+<section class="demo-panel" aria-labelledby="table-title"><div class="demo-table-heading"><h2 id="table-title">Dados usados nos cálculos</h2><span>Valores em reais</span></div>
+<div class="table-scroll" role="region" aria-label="Tabela de vendas; role horizontalmente para ver todas as colunas" tabindex="0">
+<table><caption class="visually-hidden">Pedidos fictícios filtrados para cálculo dos indicadores.</caption><thead><tr><th scope="col">Pedido</th><th scope="col">Data</th><th scope="col">Produto</th><th scope="col">Categoria</th><th scope="col" class="numeric">Quantidade</th><th scope="col" class="numeric">Preço unitário</th><th scope="col" class="numeric">Total</th></tr></thead><tbody id="sales-rows">{{DEMO_ROWS}}</tbody></table></div><p id="empty-state" hidden>Nenhum pedido corresponde a esses filtros. Experimente outro mês ou categoria.</p></section>
+<noscript><p class="demo-note">Os dados completos e os indicadores estão disponíveis. Ative o JavaScript para usar os filtros.</p></noscript>
+<section class="demo-end"><div><h2>Quer acompanhar os números do seu negócio?</h2><p>Podemos começar pela planilha que você já utiliza.</p></div><a class="btn primary" href="https://www.linkedin.com/in/rodrigo-duarte-08a3001a2/" target="_blank" rel="noopener noreferrer">Conversar sobre meu projeto ↗</a></section>
+</main><footer class="footer"><a href="../../">Rodrigo Duarte · Portfólio</a><a href="https://github.com/RodrigoDSouza/Portfolio/tree/main/demos/vendas" target="_blank" rel="noopener noreferrer">Código e roteiro no GitHub ↗</a></footer>
+</div>
+<script type="application/json" id="sales-data">{{DEMO_DATA}}</script><script src="demo.js" type="module"></script>
+</body></html>
+
